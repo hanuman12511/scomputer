@@ -1,10 +1,23 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Text} from 'react-native'
+import PageLoader from '../components/PageLoader'
 export default function SupportAndHelp(){
+    const[loader,setLoader] = useState(true)
+    useEffect(()=>{
+
+            setInterval(()=>{
+                    setLoader(false)
+            },2000)
+    },[])
+    function Loader(){
+        return(<PageLoader/>)
+    }
     return(
         <>
-        <Text>SupportAndHelp</Text>
-        </>
+         {loader? Loader():
+         <Text>SupportAndHelp</Text>
+        }
+      </>
     )
 }
