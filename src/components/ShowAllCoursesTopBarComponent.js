@@ -1,21 +1,24 @@
 
 import React from 'react'
-import {Text, View,StyleSheet} from 'react-native'
+import {Text, View,StyleSheet,Image, ScrollView} from 'react-native'
 
 export default function ShowAllCoursesTopBarComponent(){
     function coursestitle(){
         return<>
-        <View style={styles.container}>
+        <View >
+            <ScrollView style={styles.container}  horizontal={true}>
         {
-            Array.from({length:5}).map(d=>(
-                <View style={styles.course1}>
+            Array.from({length:8}).map((d,index)=>(
+                <View style={styles.courseView}>
                 <View style={styles.course}>
-               
+                    <Image  source={require('../images/icons/bestsales.png')} style={styles.image}/>
                 </View>
-                 <Text>Top Couesr</Text>
+                 <Text>Top Couesr{index}</Text>
                  </View>
+
             ))
         }
+        </ScrollView>
         </View>
         </>
     }
@@ -28,19 +31,26 @@ export default function ShowAllCoursesTopBarComponent(){
 const styles=StyleSheet.create({
     container:{
         flexDirection:'row',
+
        
     },
-    course1:{
+    courseView:{
         width:60,
-        marginLeft:10,
        justifyContent:'center',
-       alignItems:'center'
+       alignItems:'center',
+       margin:8,
     },
     course:{
         width:50,
         height:50,
         backgroundColor:'gray',
         borderRadius:50,
-        margin:8,
+        justifyContent:'center',
+        alignItems:'center'
+        
+    },
+    image:{
+        width:"80%",
+        height:"80%"
     }
 })

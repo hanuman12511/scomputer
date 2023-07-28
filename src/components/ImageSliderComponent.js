@@ -23,7 +23,7 @@ return(
                 onItemChanged={(item) => {}/* console.log("item", item) */}
                 closeIconColor="#fff"
                 onClick={(item, index) => { alert('hello' + index) }}
-                caroselImageStyle={{ resizeMode: 'cover' ,width:W,height:H*.3}}
+                caroselImageStyle={{ resizeMode: 'cover' ,width:W,height:H*.2,marginTop:4}}
                 />
         </View> 
         {/* <ImageCarousel 
@@ -54,12 +54,12 @@ return(
 }
 const styles = StyleSheet.create({
     container:{
-        marginTop:0,
+        marginTop:1,
         width:W,
-        height:H*.3,
+        height:H*.21,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'red',
+        backgroundColor:'#fff',
     },
     images:{
         width:W,
