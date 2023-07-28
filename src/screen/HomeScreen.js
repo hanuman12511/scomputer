@@ -14,9 +14,9 @@ export default function HomeScreen(){
     }
     return(
         <>
-        {loader&& Loader() }
+        {loader? Loader() :
         
-        <Text>HomeScreen</Text>
+        <Text>HomeScreen</Text>}
         </>
     )
 }

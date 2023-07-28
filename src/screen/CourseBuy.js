@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import {Text} from 'react-native'
+
 import PageLoader from '../components/PageLoader'
+import ImageSliderComponent from '../components/ImageSliderComponent'
+import SearchComponet from '../components/SearchComponent'
+import SearchComponent from '../components/SearchComponent'
+import ShowAllCoursesTopBarComponent from '../components/ShowAllCoursesTopBarComponent'
 export default function CourseBuy(){
     const[loader,setLoader] = useState(true)
     useEffect(()=>{
@@ -16,7 +21,11 @@ export default function CourseBuy(){
     
          <>
          {loader? Loader():
-           <Text>CourseBuy</Text>
+          <>
+          <SearchComponent/>
+          <ShowAllCoursesTopBarComponent/>
+          <ImageSliderComponent/>
+          </>
         }
       </>
     )

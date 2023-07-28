@@ -14,8 +14,9 @@ export default function Product(){
     }
     return(
         <>
-         {loader&& Loader()}
+         {loader? Loader():
         <Text>Product</Text>
+         }
        
         </>
     )
