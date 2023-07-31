@@ -21,6 +21,7 @@ import PrivacyPolicy from '../screen/PrivacyPolicy'
 import Schedule from '../screen/Schedule'
 import SupportAndHelp from '../screen/SupportAndHelp'
 import TermsANDConditions from '../screen/TermsANDConditions'
+import Login from '../screen/Login'
 const drawer =createDrawerNavigator()
 export default function Router(){
     return(
@@ -46,6 +47,7 @@ export default function Router(){
                 <drawer.Screen name="Contact US" component={ContactUS}/>
                 <drawer.Screen name="Privacy Policy" component={PrivacyPolicy}/>
                 <drawer.Screen name="Terms AND Conditions" component={TermsANDConditions}/>
+                <drawer.Screen name="Login" component={Login}/>
 
             </drawer.Navigator>
 
