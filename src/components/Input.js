@@ -3,10 +3,10 @@ import {Text,TextInput,StyleSheet,Dimensions,View} from 'react-native'
 const W = Dimensions.get('window').width
 const H = Dimensions.get('window').height
 export default function Input(props){
-    const[name,setName] = useState('')
+    const[data,setData] = useState('')
     return(
         <View style={styles.container}>
-            <TextInput placeholder={props.placeholder} value={name} onChangeText={d=>setName(d)} onChange={(d)=>props.onchange(d)}/>
+            <TextInput placeholder={props.placeholder} value={data} onChangeText={d=>setData(d)} onChange={props.onchange(data)}/>
         </View>
     )
 }
